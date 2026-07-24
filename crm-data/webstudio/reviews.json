@@ -8,7 +8,7 @@
   "googleMapsUri": "https://maps.google.com/?cid=8831471671326723114&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
   "reviews": [],
   "fetched_at": "2026-07-23T18:00:08.405Z",
-  "cached": false,
+  "cached": true,
   "siteKey": "webstudio",
   "publicPath": "crm-data/webstudio/reviews.json"
 }
