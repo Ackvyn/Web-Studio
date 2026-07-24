@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "headline": "Modern websites built for small businesses",
+    "supporting": "Look professional online and make it easy for customers to request a quote—clean, custom sites built for your business, without expensive subscriptions or unnecessary complexity.",
+    "primaryCta": "Request a quote",
+    "primaryHref": "/contact",
+    "secondaryCta": "View services",
+    "secondaryHref": "/services"
+  },
+  "intro": {
+    "title": "A first impression that matches your work",
+    "body": [
+      {
+        "text": "Your website is often the first impression potential customers have of your business. From Fairfield, Maine, I build fast, tailored sites for small businesses across Mid-Maine—so you look professional, earn trust, and make it simple for people to get in touch."
+      },
+      {
+        "text": "Every project is scoped to your business and the audience you want to reach. Whether you are just getting started or refreshing your online presence, the goal is simple: a website you are proud to share—and that helps customers choose you."
+      }
+    ]
+  },
+  "localProof": {
+    "title": "Serving Mid-Maine",
+    "lead": "Local-first from Fairfield—happy to work with businesses nearby and farther out when it is a good fit.",
+    "towns": [
+      { "label": "Fairfield" },
+      { "label": "Waterville" },
+      { "label": "Skowhegan" },
+      { "label": "Augusta" },
+      { "label": "Winslow" },
+      { "label": "Oakland" }
+    ]
+  }
+}

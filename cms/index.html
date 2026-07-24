@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Ackvyn Web Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <!-- Theme after sveltia-cms.js — overrides default blue accent with studio teal -->
+    <style id="ackvyn-cms-theme">
+      :root,
+      :host,
+      html,
+      body,
+      :root[data-theme],
+      :host[data-theme],
+      html[data-theme] {
+        --sui-base-hue: 168 !important;
+        --sui-primary-accent-color: #3db8a0 !important;
+        --sui-primary-accent-color-light: #4fd0b6 !important;
+        --sui-primary-accent-color-dark: #2a9a85 !important;
+        --sui-primary-accent-color-text: #3db8a0 !important;
+        --sui-primary-accent-color-inverted: #0e1217 !important;
+        --sui-primary-accent-color-translucent: rgb(61 184 160 / 60%) !important;
+        --sui-primary-accent-color-translucent-light: rgb(61 184 160 / 40%) !important;
+        --sui-button-primary-background-color: #3db8a0 !important;
+        --sui-button-primary-background-color-focus: #2a9a85 !important;
+        --sui-button-primary-background-color-active: #238072 !important;
+        --sui-button-link-foreground-color: #3db8a0 !important;
+        --sui-checkbox-background-color-checked: #3db8a0 !important;
+        --sui-focus-ring-color: rgb(61 184 160 / 60%) !important;
+        --sui-font-family-default: "Source Sans 3", ui-sans-serif, system-ui, sans-serif !important;
+        --sui-heading-font-family: "Outfit", ui-sans-serif, system-ui, sans-serif !important;
+      }
+      .container.svelte-7ua6x9 {
+        background: radial-gradient(
+          ellipse 70% 50% at 50% 8%,
+          rgb(61 184 160 / 20%),
+          transparent 58%
+        );
+      }
+      .container.svelte-7ua6x9 .inner.svelte-7ua6x9 {
+        gap: 1.5rem !important;
+      }
+      /* Prefer custom lockup (logo + wordmark) over default Sveltia mark */
+      .logo.svelte-7ua6x9 {
+        display: none !important;
+      }
+      h1.svelte-7ua6x9 {
+        font-family: "Outfit", ui-sans-serif, system-ui, sans-serif !important;
+        font-weight: 600 !important;
+        font-size: clamp(2.25rem, 5vw, 3.25rem) !important;
+        letter-spacing: -0.02em !important;
+        line-height: 1 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem !important;
+        margin: 0 !important;
+        color: #e9edf2 !important;
+        text-align: center;
+      }
+      h1.svelte-7ua6x9 .nk-brand-logo {
+        width: clamp(3.25rem, 8vw, 4.25rem);
+        height: clamp(3.25rem, 8vw, 4.25rem);
+        display: block;
+        object-fit: contain;
+      }
+      h1.svelte-7ua6x9 .nk-brand-row {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      h1.svelte-7ua6x9 .nk-brand-name {
+        font-weight: 600;
+        color: #e9edf2;
+      }
+      h1.svelte-7ua6x9 .nk-brand-accent {
+        font-size: 0.36em;
+        font-weight: 500;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #4fd0b6;
+        line-height: 1;
+      }
+      h1.svelte-7ua6x9 .nk-brand-cms {
+        font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.26em;
+        font-weight: 500;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgb(233 237 242 / 45%);
+      }
+      .container.svelte-7ua6x9 .message {
+        font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif !important;
+        color: rgb(233 237 242 / 70%) !important;
+      }
+      .nk-return-home {
+        display: inline-flex;
+        margin-top: 0.35rem;
+        border: none;
+        background: transparent;
+        color: rgb(233 237 242 / 45%);
+        font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.75rem;
+        text-decoration: none;
+      }
+      .nk-return-home:hover {
+        color: #4fd0b6;
+      }
+    </style>
+    <script>
+      (function applyAckvynAccent() {
+        var root = document.documentElement;
+        function paint() {
+          root.style.setProperty("--sui-base-hue", "168");
+          root.style.setProperty("--sui-primary-accent-color", "#3db8a0");
+          root.style.setProperty("--sui-primary-accent-color-light", "#4fd0b6");
+          root.style.setProperty("--sui-primary-accent-color-dark", "#2a9a85");
+          root.style.setProperty("--sui-button-primary-background-color", "#3db8a0");
+        }
+        paint();
+        new MutationObserver(paint).observe(root, {
+          attributes: true,
+          attributeFilter: ["data-theme", "class"],
+        });
+      })();
+
+      /** Login lockup: logo + Ackvyn + Web Studio + CMS */
+      (function brandLoginTitle() {
+        var logoSrc = new URL("../brand/ackvyn-mini.svg", location.href).href;
+        function enhance() {
+          document.querySelectorAll("h1.svelte-7ua6x9").forEach(function (h1) {
+            if (h1.dataset.ackvynBranded === "1") return;
+            var text = (h1.textContent || "").trim();
+            if (
+              text !== "Ackvyn" &&
+              text !== "Ackvyn Web Studio" &&
+              text.indexOf("Ackvyn") !== 0
+            ) {
+              return;
+            }
+            h1.dataset.ackvynBranded = "1";
+            h1.innerHTML =
+              '<img class="nk-brand-logo" src="' +
+              logoSrc +
+              '" alt="" width="68" height="68" />' +
+              '<span class="nk-brand-row">' +
+              '<span class="nk-brand-name">Ackvyn</span>' +
+              '<span class="nk-brand-accent">Web Studio</span>' +
+              "</span>" +
+              '<span class="nk-brand-cms">CMS</span>';
+          });
+        }
+        enhance();
+        new MutationObserver(enhance).observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+
+      (function addLoginReturnHome() {
+        var homeHref = new URL("../", location.href).href;
+        function ensureButton() {
+          var inner = document.querySelector(
+            ".container.svelte-7ua6x9 .inner.svelte-7ua6x9",
+          );
+          if (!inner || inner.querySelector(".nk-return-home")) return;
+          if (!inner.querySelector("h1.svelte-7ua6x9")) return;
+          var link = document.createElement("a");
+          link.className = "nk-return-home";
+          link.href = homeHref;
+          link.textContent = "Return to site";
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.assign(homeHref);
+          });
+          inner.appendChild(link);
+        }
+        ensureButton();
+        new MutationObserver(ensureButton).observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+    </script>
+    <script>
+      var SITE_ORIGIN = "https://webstudio.ackvyn.org";
+      var CMS_PREVIEW_FRAME_SRC = SITE_ORIGIN + "/cms-preview.html";
+      var PREVIEW_MSG = "ackvyn-cms-preview";
+      var PREVIEW_READY = "ackvyn-cms-preview-ready";
+
+      function entryDataToJS(entry) {
+        var data = entry.get("data");
+        if (!data) return {};
+        if (typeof data.toJS === "function") return data.toJS();
+        return data;
+      }
+
+      function createSiteModulePreview(kind, mapDraft) {
+        return createClass({
+          componentDidMount: function () {
+            var self = this;
+            this._pushToken = 0;
+            this._onFrameMessage = function (event) {
+              if (event.data && event.data.type === PREVIEW_READY) {
+                self.pushDraft();
+              }
+            };
+            window.addEventListener("message", this._onFrameMessage);
+            this.pushDraft();
+          },
+          componentDidUpdate: function () {
+            this.pushDraft();
+          },
+          componentWillUnmount: function () {
+            if (this._onFrameMessage) {
+              window.removeEventListener("message", this._onFrameMessage);
+            }
+            this._iframe = null;
+            this._pushToken += 1;
+          },
+          pushDraft: function () {
+            var self = this;
+            var iframe = this._iframe;
+            if (!iframe || !iframe.contentWindow) return;
+            var token = ++this._pushToken;
+            var fields = entryDataToJS(this.props.entry);
+            var mapped = mapDraft
+              ? mapDraft(fields, this.props)
+              : Promise.resolve(fields);
+            Promise.resolve(mapped)
+              .then(function (data) {
+                if (token !== self._pushToken) return;
+                if (!self._iframe || !self._iframe.contentWindow) return;
+                try {
+                  self._iframe.contentWindow.postMessage(
+                    { type: PREVIEW_MSG, kind: kind, data: data },
+                    "*",
+                  );
+                } catch (err) {}
+              })
+              .catch(function () {});
+          },
+          render: function () {
+            var self = this;
+            return h("iframe", {
+              ref: function (el) {
+                self._iframe = el;
+              },
+              title: "Site preview — " + kind,
+              src: CMS_PREVIEW_FRAME_SRC,
+              onLoad: function () {
+                self.pushDraft();
+              },
+              style: {
+                display: "block",
+                width: "100%",
+                minHeight: "100vh",
+                height: "100%",
+                border: "none",
+                background: "#0e1217",
+              },
+            });
+          },
+        });
+      }
+
+      CMS.registerPreviewTemplate("home", createSiteModulePreview("home"));
+      CMS.registerPreviewTemplate("services", createSiteModulePreview("services"));
+      CMS.registerPreviewTemplate("pricing", createSiteModulePreview("pricing"));
+      CMS.registerPreviewTemplate("about", createSiteModulePreview("about"));
+      CMS.registerPreviewTemplate("contact", createSiteModulePreview("contact"));
+      CMS.registerPreviewStyle(
+        "body { background: #0e1217; margin: 0; }",
+        { raw: true },
+      );
+    </script>
+  </body>
+</html>

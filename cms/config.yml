@@ -1,0 +1,253 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+# Ackvyn Web Studio CMS — https://webstudio.ackvyn.org/cms/
+# Auth: Cloudflare Worker ackvyn-studio-auth (same Worker as /admin GitHub login)
+
+backend:
+  name: github
+  repo: Ackvyn/Web-Studio
+  branch: main
+  base_url: https://ackvyn-studio-auth.ackvyn.workers.dev
+
+app_title: Ackvyn
+site_url: https://webstudio.ackvyn.org
+display_url: https://webstudio.ackvyn.org
+logo_url: https://webstudio.ackvyn.org/brand/ackvyn-mini.svg
+logo:
+  src: https://webstudio.ackvyn.org/brand/ackvyn-mini.svg
+  show_in_header: true
+
+media_folder: images
+public_folder: /images
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: site
+    label: Site settings
+    files:
+      - name: home
+        label: Home
+        file: content/home.json
+        editor:
+          preview: true
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Headline, name: headline, widget: string }
+              - { label: Supporting text, name: supporting, widget: text }
+              - { label: Primary CTA label, name: primaryCta, widget: string }
+              - { label: Primary CTA path, name: primaryHref, widget: string, hint: "e.g. /contact" }
+              - { label: Secondary CTA label, name: secondaryCta, widget: string }
+              - { label: Secondary CTA path, name: secondaryHref, widget: string, hint: "e.g. /services" }
+
+          - label: Intro
+            name: intro
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Body paragraphs
+                name: body
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: Paragraph, name: text, widget: text }
+
+          - label: Local proof
+            name: localProof
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+              - label: Towns
+                name: towns
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Town, name: label, widget: string }
+
+      - name: services
+        label: Services
+        file: content/services.json
+        editor:
+          preview: true
+        fields:
+          - label: What I build
+            name: whatIBuild
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+              - label: Audiences
+                name: audiences
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Audience, name: label, widget: string }
+              - { label: Note, name: note, widget: text }
+              - { label: Page structures note, name: pageStructures, widget: text }
+
+          - label: What's included
+            name: whatsIncluded
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+              - label: Items
+                name: items
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+
+          - label: Hosting
+            name: hosting
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+              - { label: Ownership, name: ownership, widget: text }
+              - { label: CMS note, name: cms, widget: text }
+
+          - label: Approach
+            name: approach
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+              - { label: Body, name: body, widget: text }
+
+          - label: Integrations
+            name: integrations
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+              - label: Items
+                name: items
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Item, name: label, widget: string }
+
+      - name: pricing
+        label: Pricing
+        file: content/pricing.json
+        editor:
+          preview: true
+        fields:
+          - label: Home / section intro
+            name: intro
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Lead, name: lead, widget: text }
+
+          - label: Price list
+            name: items
+            widget: list
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{service}} — {{price}}"
+            fields:
+              - { label: Service, name: service, widget: string }
+              - { label: Price, name: price, widget: string }
+              - { label: What's included, name: includes, widget: text }
+
+          - label: Pricing page
+            name: page
+            widget: object
+            collapsed: true
+            fields:
+              - { label: Page title, name: title, widget: string }
+              - { label: Page lead, name: lead, widget: text }
+              - label: Good to know notes
+                name: notes
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{text}}"
+                fields:
+                  - { label: Note, name: text, widget: text }
+              - label: FAQ
+                name: faq
+                widget: list
+                collapsed: true
+                minimize_collapsed: true
+                summary: "{{question}}"
+                fields:
+                  - { label: Question, name: question, widget: string }
+                  - { label: Answer, name: answer, widget: text }
+
+      - name: about
+        label: About
+        file: content/about.json
+        editor:
+          preview: true
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Paragraphs
+            name: paragraphs
+            widget: list
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.text}}"
+            fields:
+              - { label: Paragraph, name: text, widget: text }
+
+      - name: contact
+        label: Contact
+        file: content/contact.json
+        editor:
+          preview: true
+        fields:
+          - label: Email
+            name: email
+            widget: string
+            hint: Shown on the site and used for form submissions (FormSubmit).
+
+          - label: Location
+            name: location
+            widget: string
+            hint: "e.g. Fairfield, Maine"
+
+          - label: Service area line
+            name: locationLine
+            widget: text
+            hint: Short line under the email (Mid-Maine, towns, etc.).
+
+          - { label: Title, name: title, widget: string }
+          - { label: Lead, name: lead, widget: text }
+
+          - label: Business types (form dropdown)
+            name: businessTypes
+            widget: list
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Type, name: label, widget: string }

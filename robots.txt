@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /launch
+Disallow: /cms
+
+Sitemap: https://webstudio.ackvyn.org/sitemap.xml

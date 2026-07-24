@@ -1,0 +1,76 @@
+{
+  "intro": {
+    "title": "Pricing",
+    "lead": "Typical project ranges below. After we talk through your goals and scope, I will send a clear, defined quote—not a surprise bill."
+  },
+  "items": [
+    {
+      "service": "Website design & development",
+      "price": "$600–$750",
+      "includes": "A typical project covers about five core pages (Home, About, Services, Gallery or FAQs, Contact), custom layout for your brand, contact form, Google Maps and Business Profile setup, domain and HTTPS, deployment, and initial revisions. Final price depends on page count and complexity—we lock in a defined quote after discovery."
+    },
+    {
+      "service": "Optional maintenance",
+      "price": "$35 / month",
+      "includes": "Ongoing care—not prepaid hourly work. Monitoring, deployment and DNS help, and priority support so I stay in your back pocket. Day-to-day wording and photos are yours via the CMS; this plan covers when you want layout help, small fixes, or someone technical on call. New pages, redesigns, and feature work use the hourly rate below."
+    },
+    {
+      "service": "Additional work",
+      "price": "$50 / hour (1-hr min)",
+      "includes": "New pages, major design revisions, additional features, technical consulting, or bigger structural updates outside routine CMS content edits."
+    },
+    {
+      "service": "Developer handoff (optional)",
+      "price": "+$300",
+      "includes": "Full git repository, deploy notes, and project source for when another developer takes over the codebase. You already own your domain, content, and live site—this is only for a complete developer-level handoff."
+    }
+  ],
+  "page": {
+    "title": "Pricing",
+    "lead": "Straightforward ranges up front. A defined quote after we discuss your project.",
+    "notes": [
+      {
+        "text": "A typical $600–$750 project covers about five core pages, a contact form, map and Google Business Profile setup, domain/HTTPS, a free Sveltia CMS tailored to your site, launch, and initial revisions. Page count, content readiness, and integrations can adjust the final quote."
+      },
+      {
+        "text": "Most sites launch in about 2–4 weeks after your content is ready. A 50% deposit starts the project; the balance is due at launch."
+      },
+      {
+        "text": "You should not need me for routine wording, prices, or photo updates—that is what the CMS is for. Optional monthly maintenance is ongoing care (monitoring, DNS/deploy help, priority support) and a way to keep me in your back pocket for layout changes, new pages, or bigger structural work. Light CMS-side tweaks can still happen when something small needs a hand; redesigns and new features stay hourly."
+      },
+      {
+        "text": "You own your domain, content, and live site from day one. The optional developer handoff is only if you want the full git repository passed to another developer."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What affects the final project price?",
+        "answer": "Page count, custom layouts, amount of content you provide vs. what needs structuring, and integrations like booking widgets or review feeds."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Most sites launch in about 2–4 weeks after your content (copy, photos, branding) is ready. Content delays are the usual reason timelines stretch."
+      },
+      {
+        "question": "How does payment work?",
+        "answer": "A 50% deposit starts the project. The remaining balance is due at launch, before final handoff of live credentials and deployment details."
+      },
+      {
+        "question": "Will I need you every time I want to change text or photos?",
+        "answer": "No. Sites include Sveltia CMS—a free content manager customized to your pages—so you can update copy, prices, and images yourself. I am still available when you want layout changes, new pages, or something beyond day-to-day content."
+      },
+      {
+        "question": "What does maintenance cover vs hourly work?",
+        "answer": "Maintenance is optional ongoing care: monitoring, DNS and deployment help, priority response, and a standing relationship when something needs attention. Routine content edits are yours via the CMS. New pages, redesigns, feature work, or bigger structural changes use the hourly rate—so the monthly plan is peace of mind and backup help, not a substitute for learning the editor."
+      },
+      {
+        "question": "Do I need the developer handoff?",
+        "answer": "Most clients do not. You already own your domain, content, and live site. The optional handoff is for when you want the full git repository and deploy notes passed to another developer."
+      },
+      {
+        "question": "Do I have to share account logins for domain or Cloudflare setup?",
+        "answer": "You own the accounts. The preferred approach is that we set things up together, or you grant temporary collaborator access. If you want a fully hands-off setup, temporary login sharing is possible with your consent—then you should change passwords after handoff. Details are in the Privacy Policy."
+      }
+    ]
+  }
+}

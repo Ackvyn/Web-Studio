@@ -1,0 +1,72 @@
+{
+  "whatIBuild": {
+    "title": "What I build",
+    "lead": "High-performance static websites for local businesses that need a polished online presence—fast, easy to maintain, and priced for small budgets instead of complex web apps.",
+    "audiences": [
+      { "label": "Landscaping companies" },
+      { "label": "Contractors and trades" },
+      { "label": "Local service businesses" },
+      { "label": "Personal portfolios" },
+      { "label": "Landing pages" },
+      { "label": "Informational business websites" },
+      { "label": "Small organizations" }
+    ],
+    "note": "I currently do not offer e-commerce stores, custom backend systems, or user portals.",
+    "pageStructures": "Most small business websites include core pages like Home, About, Services, Gallery, FAQs, and Contact. Every project is different, and the final layout is customized to your goals."
+  },
+  "whatsIncluded": {
+    "title": "What's included",
+    "lead": "Every project is custom-built from the ground up—typically about five core pages for a small business site.",
+    "items": [
+      {
+        "title": "Responsive design",
+        "description": "Fully mobile-friendly and optimized for desktops, tablets, and phones."
+      },
+      {
+        "title": "Handcrafted layout",
+        "description": "Built to fit your brand and budget—not a one-size template you are stuck fighting."
+      },
+      {
+        "title": "Content management (Sveltia CMS)",
+        "description": "A free, open-source CMS tailored to your site—so you can update wording, prices, and photos yourself without waiting on me for every little change."
+      },
+      {
+        "title": "Essentials integration",
+        "description": "Contact forms, Google Maps, and Google Business Profile mapping."
+      },
+      {
+        "title": "Social & SEO basics",
+        "description": "Social profile links plus page titles, meta descriptions, sensible headings, a sitemap, and fast load times—so search engines can understand your site. Not a ranking guarantee."
+      },
+      {
+        "title": "Security & launch",
+        "description": "Custom domain configuration, secure HTTPS, deployment, and initial revisions."
+      },
+      {
+        "title": "Performance-focused",
+        "description": "Lightweight, static builds that load quickly and stay simple to host and maintain."
+      }
+    ]
+  },
+  "hosting": {
+    "title": "Hosting & reliability",
+    "lead": "Sites deploy on modern static hosting—typically free or very low cost (for example GitHub Pages)—with fast loads, strong security, and none of the monthly builder fees.",
+    "ownership": "You own your domain, content, accounts, and live site. I handle setup, technical configuration, and deployment so you are never locked into a proprietary platform or an expensive hosting plan.",
+    "cms": "Content edits run through Sveltia CMS—a free CMS customized to your pages and fields—so day-to-day wording and photos stay in your hands after launch."
+  },
+  "approach": {
+    "title": "My approach",
+    "lead": "Every business is at a different stage. Some clients have branding, photography, and copy ready; others start from scratch.",
+    "body": "Where it helps, I share practical recommendations from industry experience—organizing content, collecting project photos, encouraging reviews, or standing out online. I do not offer standalone marketing services, but I am transparent about what I believe will genuinely help your business succeed."
+  },
+  "integrations": {
+    "title": "Third-party integrations",
+    "lead": "When it makes sense, trusted external services expand your site’s utility without bloating the code.",
+    "items": [
+      { "label": "Live chat (e.g. Tawk.to)" },
+      { "label": "Customer reviews (e.g. Elfsight, Google Reviews)" },
+      { "label": "Appointment scheduling (e.g. Calendly)" },
+      { "label": "Advanced image galleries and analytics tools" }
+    ]
+  }
+}

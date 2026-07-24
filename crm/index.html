@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="theme-color" content="#0f1419" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Ackvyn CRM" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>Ackvyn CRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body,
+      #root {
+        margin: 0;
+        min-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Sveltia-style: thin HTML on this site; GUI comes from CDN console.js.
+      Origin stays webstudio.ackvyn.org (Worker allowlist = this site).
+      data-api / data-auth are THIS operator’s Workers — not baked into the CDN script.
+    -->
+    <div id="root"></div>
+    <script
+      src="https://crm.ackvyn.org/console.js?v=20260723al"
+      data-api="https://ackvyn-crm.ackvyn.workers.dev"
+      data-auth="https://ackvyn-studio-auth.ackvyn.workers.dev"
+      data-site="webstudio"
+    ></script>
+  </body>
+</html>
