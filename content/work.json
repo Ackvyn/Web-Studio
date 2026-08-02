@@ -11,14 +11,17 @@
       "description": "Family-owned car detailing in Fairfield, Maine — careful work, honest quotes, and a finish that doesn’t cut corners.",
       "isExample": true,
       "image": "",
-      "url": "https://neatnikdetailing.com/"
+      "url": "https://neatnikdetailing.com/",
+      "showUrl": true
     },
     {
-      "id": "example-trades",
-      "name": "Contractor / trades site",
-      "niche": "Example niche",
-      "description": "Mobile-first presence with clear services and trust signals.",
-      "isExample": true
+      "id": "webstudio-ackvyn",
+      "name": "This Site",
+      "niche": "Web Design",
+      "description": "Local-first from Fairfield—happy to work with businesses nearby and farther out when it is a good fit.",
+      "isExample": true,
+      "url": "https://webstudio.ackvyn.org/",
+      "showUrl": false
     },
     {
       "id": "example-local",
