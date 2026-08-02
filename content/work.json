@@ -15,6 +15,15 @@
       "showUrl": true
     },
     {
+      "id": "crm-ackvyn",
+      "name": "Ackvyn CRM",
+      "niche": "Customer Relationship Management",
+      "description": "Static sites already had content figured out. Conversations were the missing open piece.",
+      "isExample": true,
+      "url": "https://crm.ackvyn.org/site/",
+      "showUrl": true
+    },
+    {
       "id": "webstudio-ackvyn",
       "name": "This Site",
       "niche": "Web Design",
@@ -22,13 +31,6 @@
       "isExample": true,
       "url": "https://webstudio.ackvyn.org/",
       "showUrl": false
-    },
-    {
-      "id": "example-local",
-      "name": "Local service business site",
-      "niche": "Example niche",
-      "description": "Clean informational site tied to Google Business Profile.",
-      "isExample": true
     },
     {
       "id": "example-landing",
