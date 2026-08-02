@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: transparent;
+      }
+      #tawk_6a5a61437150471d4bbcfe7b {
+        width: 100%;
+        height: 100%;
+        min-height: 28rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tawk_6a5a61437150471d4bbcfe7b"></div>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date()
+      Tawk_API.embedded = 'tawk_6a5a61437150471d4bbcfe7b'
+      ;(function () {
+        var s1 = document.createElement('script'),
+          s0 = document.getElementsByTagName('script')[0]
+        s1.async = true
+        s1.src =
+          'https://embed.tawk.to/6a5a61437150471d4bbcfe7b/1ju2nbc9b'
+        s1.charset = 'UTF-8'
+        s1.setAttribute('crossorigin', '*')
+        s0.parentNode.insertBefore(s1, s0)
+      })()
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- NEW CODE - TESTING: inject CSS into Tawk iframes (same-origin access) -->
+    <script type="text/javascript">
+      ;(function () {
+        var STYLE_ID = 'ackvyn-tawk-hide-footer'
+        var CSS_TEXT =
+          '.tawk-card.tawk-card-inverse.tawk-card-xsmall.tawk-footer.tawk-flex-none,' +
+          '.tawk-card.tawk-card-inverse.tawk-card-xsmall,' +
+          '.tawk-footer.tawk-flex-none,' +
+          '.tawk-footer{' +
+          'display:none!important;' +
+          'height:0!important;' +
+          'min-height:0!important;' +
+          'overflow:hidden!important;' +
+          'padding:0!important;' +
+          'margin:0!important;' +
+          'border:0!important;' +
+          'pointer-events:none!important;' +
+          '}'
+
+        function injectStyle(doc) {
+          try {
+            if (!doc || !doc.createElement) return false
+            if (doc.getElementById(STYLE_ID)) return true
+            var style = doc.createElement('style')
+            style.id = STYLE_ID
+            style.textContent = CSS_TEXT
+            var target = doc.head || doc.documentElement
+            if (!target) return false
+            target.appendChild(style)
+            return true
+          } catch (e) {
+            return false
+          }
+        }
+
+        function walk(doc, seen) {
+          if (!doc || seen.has(doc)) return
+          seen.add(doc)
+          injectStyle(doc)
+          var frames
+          try {
+            frames = doc.querySelectorAll('iframe')
+          } catch (e) {
+            return
+          }
+          for (var i = 0; i < frames.length; i++) {
+            var frame = frames[i]
+            try {
+              var child = frame.contentDocument || frame.contentWindow.document
+              if (child) walk(child, seen)
+            } catch (e) {
+              // Cross-origin — skip
+            }
+            frame.addEventListener('load', function () {
+              scan()
+            })
+          }
+        }
+
+        function scan() {
+          walk(document, new WeakSet())
+        }
+
+        Tawk_API = Tawk_API || {}
+        var previousOnLoad = Tawk_API.onLoad
+        Tawk_API.onLoad = function () {
+          if (typeof previousOnLoad === 'function') previousOnLoad()
+          scan()
+        }
+
+        scan()
+        setInterval(scan, 800)
+        if (typeof MutationObserver !== 'undefined' && document.body) {
+          new MutationObserver(function () {
+            scan()
+          }).observe(document.body, { childList: true, subtree: true })
+        }
+      })()
+    </script>
+  </body>
+</html>

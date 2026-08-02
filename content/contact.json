@@ -1,0 +1,30 @@
+{
+  "title": "Get in touch",
+  "lead": "Based in Fairfield, Maine\u2014serving Mid-Maine and surrounding communities. Tell me about your business and what you need. If you are outside the area and it looks like a good fit, still reach out.",
+  "businessTypes": [
+    {
+      "label": "Landscaping / outdoor"
+    },
+    {
+      "label": "Contractor / trades"
+    },
+    {
+      "label": "Local service business"
+    },
+    {
+      "label": "Portfolio / personal"
+    },
+    {
+      "label": "Landing page"
+    },
+    {
+      "label": "Small organization"
+    },
+    {
+      "label": "Other"
+    }
+  ],
+  "email": "contact@ackvyn.org",
+  "location": "Fairfield, Maine",
+  "locationLine": "Serving Mid-Maine and surrounding communities"
+}

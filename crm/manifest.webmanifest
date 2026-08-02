@@ -1,0 +1,11 @@
+{
+  "name": "Ackvyn CRM",
+  "short_name": "CRM",
+  "start_url": "/crm/",
+  "scope": "/crm/",
+  "display": "standalone",
+  "background_color": "#0f1419",
+  "theme_color": "#0f1419",
+  "description": "Ackvyn CRM — chats, tickets, contacts, documents",
+  "icons": []
+}

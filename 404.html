@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ackvyn Web Studio</title>
+    <meta name="robots" content="noindex" />
+    <script>
+      (function (location) {
+        var pathSegmentsToKeep = 0;
+        var path = location.pathname
+          .slice(1)
+          .split("/")
+          .slice(pathSegmentsToKeep)
+          .join("/");
+
+        // Real static tools should never be routed through the React SPA.
+        if (
+          path === "cms" ||
+          path.indexOf("cms/") === 0 ||
+          path === "crm" ||
+          path.indexOf("crm/") === 0
+        ) {
+          return;
+        }
+
+        location.replace(
+          location.protocol +
+            "//" +
+            location.hostname +
+            (location.port ? ":" + location.port : "") +
+            "/?/" +
+            path.replace(/&/g, "~and~") +
+            (location.search
+              ? "&" + location.search.slice(1).replace(/&/g, "~and~")
+              : "") +
+            location.hash,
+        );
+      })(window.location);
+    </script>
+  </head>
+  <body></body>
+</html>

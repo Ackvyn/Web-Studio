@@ -1,0 +1,38 @@
+{
+  "intro": {
+    "title": "Example niches",
+    "lead": "Illustrative examples of the kinds of sites I build—not live client projects. Real screenshots will replace these as work ships."
+  },
+  "items": [
+    {
+      "id": "neatnik-detailing",
+      "name": "Neatnik Detailing",
+      "niche": "Car Detailing",
+      "description": "Family-owned car detailing in Fairfield, Maine — careful work, honest quotes, and a finish that doesn’t cut corners.",
+      "isExample": true,
+      "image": "",
+      "url": "https://neatnikdetailing.com/"
+    },
+    {
+      "id": "example-trades",
+      "name": "Contractor / trades site",
+      "niche": "Example niche",
+      "description": "Mobile-first presence with clear services and trust signals.",
+      "isExample": true
+    },
+    {
+      "id": "example-local",
+      "name": "Local service business site",
+      "niche": "Example niche",
+      "description": "Clean informational site tied to Google Business Profile.",
+      "isExample": true
+    },
+    {
+      "id": "example-landing",
+      "name": "Campaign landing page",
+      "niche": "Example niche",
+      "description": "Single-page site optimized for lead capture.",
+      "isExample": true
+    }
+  ]
+}
