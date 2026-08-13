@@ -7,8 +7,8 @@
   "userRatingCount": null,
   "googleMapsUri": "https://maps.google.com/?cid=8831471671326723114&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
   "reviews": [],
-  "fetched_at": "2026-08-12T18:01:04.262Z",
-  "cached": true,
+  "fetched_at": "2026-08-13T18:00:16.215Z",
+  "cached": false,
   "siteKey": "webstudio",
   "publicPath": "content/reviews.json"
 }
